@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Remove Xiaohongshu Recommended Feeds
 // @name:zh-CN   移除小红书首页的个性化推送
-// @version      1.1.0.20250429
-// @namespace    https://github.com/Konano
 // @description  Automatically removes the exploreFeeds element from Xiaohongshu pages
 // @description:zh-CN  当访问小红书首页时自动移除个性化推送
+// @namespace    https://github.com/Konano
+// @version      1.1.0.20250429
 // @author       Konano
+// @homepageURL  https://github.com/Konano/greasyfork-script
 // @match        https://www.xiaohongshu.com/*
 // @icon         https://www.xiaohongshu.com/favicon.ico
 // @license      MIT
