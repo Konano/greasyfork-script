@@ -4,7 +4,7 @@
 // @description  Automatically removes the exploreFeeds element from Xiaohongshu pages
 // @description:zh-CN  当访问小红书首页时自动移除个性化推送
 // @namespace    https://github.com/Konano
-// @version      1.1.0.20250429
+// @version      1.1.1.20250429
 // @author       Konano
 // @homepageURL  https://github.com/Konano/greasyfork-script
 // @match        https://www.xiaohongshu.com/*
@@ -40,7 +40,7 @@
             console.log('Xiaohongshu exploreFeeds element has been removed');
             exploreElement.dataset.removed = 'true';
         }
-        
+
         // Remove elements with IDs starting with "homefeed."
         const homefeedElements = document.querySelectorAll('[id^="homefeed."]');
         homefeedElements.forEach(element => {
@@ -50,7 +50,7 @@
                 element.dataset.removed = 'true';
             }
         });
-        
+
         // Remove element with ID "homefeed_recommend"
         const recommendElement = document.getElementById('homefeed_recommend');
         if (recommendElement && !recommendElement.dataset.removed) {
