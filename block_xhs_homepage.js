@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Block Xiaohongshu Homepage
 // @name:zh-CN   禁止访问小红书首页
-// @version      1.0.1.20250429
+// @version      1.0.2.20250429
 // @namespace    https://github.com/Konano
-// @description  Redirects to a blank page when visiting Xiaohongshu homepage to prevent addiction to fragmented information
-// @description:zh-CN  当访问小红书首页时跳转到空白页，防止沉迷碎片信息
+// @description  Redirects to search page when visiting Xiaohongshu homepage to prevent addiction to fragmented information
+// @description:zh-CN  当访问小红书首页时跳转到搜索页面，防止沉迷碎片信息
 // @author       Konano
 // @match        https://www.xiaohongshu.com/*
 // @icon         https://www.xiaohongshu.com/favicon.ico
@@ -15,6 +15,8 @@
 
 (function() {
     'use strict';
+
+    const redirectTarget = 'https://www.xiaohongshu.com/search_result?type=51';
 
     // Check if the current URL is Xiaohongshu homepage
     function isExploreUrl(url) {
@@ -33,17 +35,17 @@
         return false;
     }
 
-    // Delayed redirect to blank page
+    // Delayed redirect to search page
     function delayedRedirect() {
         setTimeout(function() {
-            console.log('Redirecting to blank page...');
-            window.location.href = 'about:blank';
+            console.log('Redirecting to search page...');
+            window.location.href = redirectTarget;
         }, 500);
     }
 
     // If current page is homepage, call redirect function
     if (isExploreUrl(window.location.href)) {
-        console.log('Xiaohongshu homepage detected, redirecting to blank page...');
+        console.log('Xiaohongshu homepage detected, redirecting to search page...');
         delayedRedirect();
         return;
     }
@@ -51,7 +53,7 @@
     // Periodically check current URL
     setInterval(function() {
         if (isExploreUrl(window.location.href)) {
-            console.log('Xiaohongshu homepage detected, redirecting to blank page...');
+            console.log('Xiaohongshu homepage detected, redirecting to search page...');
             delayedRedirect();
         }
     }, 1000);
