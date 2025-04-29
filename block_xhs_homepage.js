@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Block Xiaohongshu Homepage
 // @name:zh-CN   禁止访问小红书首页
-// @version      1.0.0.20250429
+// @version      1.0.1.20250429
 // @namespace    https://github.com/Konano
 // @description  Redirects to a blank page when visiting Xiaohongshu homepage to prevent addiction to fragmented information
 // @description:zh-CN  当访问小红书首页时跳转到空白页，防止沉迷碎片信息
