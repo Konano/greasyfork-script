@@ -8,6 +8,7 @@
 // @author       Konano
 // @match        https://www.xiaohongshu.com/*
 // @icon         https://www.xiaohongshu.com/favicon.ico
+// @license      MIT
 // @grant        none
 // @run-at       document-start
 // ==/UserScript==
